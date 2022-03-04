@@ -5,7 +5,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
  * Using the provided documentation, retrive the name value from the JSON file 'assets/data.json'
  * And use it to replace the world property/variable
  *
- * https://angular.io/tutorial/toh-pt6#heroes-and-http
+ * https://angular.io/guide/http
  */
 
 @Component({
