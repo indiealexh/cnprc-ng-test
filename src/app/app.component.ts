@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { animate, style, transition, trigger } from '@angular/animations';
+import { animate, query, stagger, style, transition, trigger } from '@angular/animations';
 import { Observable } from 'rxjs';
 
 /**
@@ -15,12 +15,18 @@ import { Observable } from 'rxjs';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
   animations: [
-    trigger('myInsertRemoveTrigger', [
+    trigger('helloThere', [
       transition(':enter', [
-        style({ opacity: 0 }),
-        animate('100ms', style({ opacity: 1 })),
+        query('div', [
+          style({ opacity: 0, transform: 'translateY(-100px)' }),
+          stagger(2000, [
+            animate(
+              '1s cubic-bezier(0.35, 0, 0.25, 1)',
+              style({ opacity: 1, transform: 'none' })
+            ),
+          ]),
+        ]),
       ]),
-      transition(':leave', [animate('100ms', style({ opacity: 0 }))]),
     ]),
   ],
 })
