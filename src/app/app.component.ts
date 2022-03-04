@@ -25,6 +25,6 @@ export class AppComponent implements OnInit {
   }
 }
 
-class Data {
+export interface Data {
   name: string;
 }
