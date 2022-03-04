@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { animate, style, transition, trigger } from '@angular/animations';
+import { Observable } from 'rxjs';
 
 /**
  * Using the provided documentation, retrive the name value from the JSON file 'assets/data.json'
