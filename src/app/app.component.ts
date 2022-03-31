@@ -4,10 +4,17 @@ import { animate, query, stagger, style, transition, trigger } from '@angular/an
 import { Observable } from 'rxjs';
 
 /**
+ * 1)
  * Using the provided documentation, retrive the name value from the JSON file 'assets/data.json'
  * And use it to replace the world property/variable
  *
  * https://angular.io/guide/http
+ * 
+ * 2) 
+ * If you complete the above task with time to spare, please also create an intuitive UI that displays the name value as if it was the current active user of the application.
+ * When the name is clicked a menu should drop down with a logout button
+ * 
+ * https://material.angular.io/components/categories
  */
 
 @Component({
